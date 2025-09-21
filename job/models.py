@@ -16,6 +16,14 @@ class Job(models.Model): # table
     vanancy = models.IntegerField(default=1)
     salary = models.IntegerField(default=0)
     experinace = models.IntegerField(default=1)
+    # Relation to Category table 
+    category = models.ForeignKey("Category",on_delete=models.CASCADE)
     
     def __str__(self): #opject لإرجاع اسم الوظيفة المدخل في قاعدة البيانات وليس كلمة 
         return self.title
+    
+class Category(models.Model):
+    name = models.CharField(max_length=25)
+    
+    def __str__(self):
+        return self.name

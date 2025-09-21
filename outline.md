@@ -23,3 +23,8 @@ Blog:
     -author
 
     -search 
+    -comment
+    recent post
+
+Contact 
+Home
